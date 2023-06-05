@@ -1,0 +1,23 @@
+name: pippi
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Run a one-line script
+        run: echo "Heisann! Jeg er Pippi."
+
+      - name: Run a multi-line script
+        run: |
+          echo "Heisann! Jeg er Pippi."
+          echo "Kult! #jepp"
